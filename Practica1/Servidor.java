@@ -1,4 +1,3 @@
-// Clase Servidor
 import java.io.*;
 import java.net.*;
 
