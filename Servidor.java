@@ -35,24 +35,30 @@ public class Servidor {
             out1.println("Tu turno.");
             inputLine1 = in1.readLine();
             System.out.println("Jugador 1: " + inputLine1);
-            if (inputLine1.equals("Tocado")) {
+            if (inputLine1.equals("tocado")) {
                 contadorJugador1++;
                 if (contadorJugador1 == 5) {
-                    out1.println("Tocado y hundido!");
+                    out1.println("Tocado y hundido! ¡Felicidades, has ganado!");
+                    out2.println("Tocado y hundido! ¡Lo siento, has perdido!");
                     break;
                 }
+            } else {
+                contadorJugador1 = 0;
             }
             
             // Turno del Jugador 2
             out2.println("Tu turno.");
             inputLine2 = in2.readLine();
             System.out.println("Jugador 2: " + inputLine2);
-            if (inputLine2.equals("Tocado")) {
+            if (inputLine2.equals("tocado")) {
                 contadorJugador2++;
                 if (contadorJugador2 == 5) {
-                    out2.println("Tocado y hundido!");
+                    out2.println("Tocado y hundido! ¡Felicidades, has ganado!");
+                    out1.println("Tocado y hundido! ¡Lo siento, has perdido!");
                     break;
                 }
+            } else {
+                contadorJugador2 = 0;
             }
         }
         
